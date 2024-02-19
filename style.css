@@ -1,0 +1,50 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+img,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1185px;
+    margin: 0 auto;
+}
+
+.header {
+    font-weight: 600;
+    font-style: normal;
+}
+
+.offer__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.offer {
+    display: flex;
+    flex-direction: column;
+}
+
