@@ -27,6 +27,24 @@ h6 {
     margin: 0;
 }
 
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    /* Убирает специфичный цвет ссылки, наследует цвет от родителя */
+    text-decoration: none;
+    /* Убирает подчеркивание у ссылок */
+    background-color: transparent;
+    /* Убирает фон, если он был */
+    -webkit-text-decoration-skip: objects;
+    /* Пропускает декорацию текста вокруг объектов для WebKit браузеров */
+}
+
+/* Опционально, для ссылок при наведении можно добавить свои стили */
+
+
+
 .container {
     width: 1185px;
     margin: 0 auto;
@@ -35,16 +53,119 @@ h6 {
 .header {
     font-weight: 600;
     font-style: normal;
+    background: #326976;
+    color: #FFF;
 }
 
 .offer__wrapper {
     display: flex;
     justify-content: space-between;
-
 }
 
 .offer {
     display: flex;
     flex-direction: column;
+    width: 713px;
+    padding: 61px 0 70px 0;
 }
 
+.offer__title {
+    font-size: clamp(20px, 25px, 30px);
+}
+
+.offer__text {
+    width: 685px;
+    margin-top: 40px;
+    margin-bottom: 61px;
+    font-size: clamp(12px, 14px, 16px);
+}
+
+.offer__description {
+    font-size: clamp(25px, 30px, 36px);
+}
+
+.header__img {
+    margin-top: 28px;
+    width: 455px;
+    height: 493px;
+}
+
+.offer__link {
+    width: 236px;
+    padding: 13px 10.5px;
+    border-radius: 6px;
+    border: 3px solid white;
+    font-size: clamp(18px, 20px, 24px);
+    margin-top: 47px;
+    text-align: center;
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
+
+.offer__link:hover,
+.offer__link:focus {
+    opacity: .6;
+}
+
+@media screen and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .header__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .offer {
+        width: auto;
+    }
+
+    .offer__text {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .offer__wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+        padding-inline: 5px;
+    }
+
+    .offer {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .offer__title {
+        width: 100%;
+    }
+
+    .offer__text {
+        width: 100%;
+    }
+
+    .offer__description {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+    .container {
+        width: clamp(300px, 100%, 575px);
+    }
+}
